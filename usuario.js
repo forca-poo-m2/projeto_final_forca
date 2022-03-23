@@ -30,11 +30,21 @@ class forca {
     }
     
     jogar(){
-        let numeroTema = prompt("Escolha o Tema:\n0 - Países da América do Sul\n1 - Linguagens de Programação\n2 - Frutas")
-        if(numeroTema != 0 || numeroTema != 1 || numeroTema != 2){
-             numeroTema = prompt("Escolha o Tema:\n0 - Países da América do Sul\n1 - Linguagens de Programação\n2 - Frutas");
-        }if (numeroTema==0){
-            retur
+        let numeroTema =3
+        while (numeroTema>2) {
+           numeroTema= prompt("Escolha o Tema:\n0 - Países da América do Sul\n1 - Linguagens de Programação\n2 - Frutas")
+
+           if(numeroTema==0){
+               alert ("Você escolheu o tema Países da América do Sul")
+           }else if(numeroTema==1){
+            alert ("Você escolheu o tema Linguagens de Programação" )
+           }else if(numeroTema==2){
+            alert ("Você escolheu o tema Frutas")
+           }else{
+               alert ("Escolha um valor válido")
+               numeroTema=3
+           }
+           
         }
 
         function sorteaPalavra(){

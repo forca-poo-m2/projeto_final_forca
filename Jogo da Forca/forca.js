@@ -10,3 +10,21 @@
 // Classe usuário
 // Classe palavras
 // Classe forca
+
+let paisesAmericaDoSul = ["brasil", "argentina" , "chile", "equador", "uruguai"];
+let linguagensDeProgramacao = ["java","python","javascript","typescript","csharp"];
+let frutas = ["morango", "pitaya", "abacaxi", "laranja","goiaba"];
+
+class Usuario {
+    constructor(nome, email) {
+        this.nome = nome,   
+        this.email = email
+    }
+
+    criaUsuario () {
+        const sejaBemVindo = alert("Seja bem vindo ao Jogo da Forca do Squad Verde!\nPara jogar faça seu cadastro.");
+        this.nome = prompt("Digite seu nome: ");
+        this.email = prompt("Digite seu email: ");
+        alert(`Nome: ${this.nome}\nEmail: ${this.email}`);
+    }
+}

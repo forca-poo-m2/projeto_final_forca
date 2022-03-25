@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forca</title>
+</head>
+<body>
+    <h1>Jogo da Forca</h1>
+    <h2>Digite no teclado uma letra e tente adivinhar a palavra</h2>
+    <div class="jogoContainer">
+        <div class = "focaContainer">
+            <svg height="250" width="200" class="forca">
+            <!--forca-->
+                <line x1="60" y1="20" x2="140" y2="20"></line>
+                <line x1="140" y1="20" x2="140" y2="50"></line>
+                <line x1="60" y1="20" x2="60" y2="230"></line>
+                <line x1="20" y1="230" x2="100" y2="230"></line>
+                <!--cabeça-->
+                <circle cx="140" cy="70" r="20" class="forcaPartes"></circle>
+                <!--Corpo-->
+                <line x1="140" y1="90" x2="140" y2="150" class="forcaPates"></line>
+                <!--braços-->
+                <line x1="140" y1="120" x2="120" y2="100" class="forcaPates"></line>
+                <line x1="140" y1="120" x2="160" y2="100" class="forcaPates"></line>
+                <!--pernas-->
+               <line x1="140" y1="150" x2="120" y2="180" class="forcaPates"></line>
+                <line x1="140" y1="150" x2="120" y2="180" class="forcaPates"></line>
+            </svg>
+        </div>
+
+        <div class="letrasErradas">
+            <h3>letras erradas</h3>
+        </div>
+    </div>        
+
+    <div class="palavra"></div>
+    <div class="aviso">
+        vc já usou essa letra
+    </div>
+    <div class=" poup">
+        <h2 id ="mensagem"></h2>
+        <button id="btn-jogar">Jogar novamente</button>
+    </div>
+    <script src="word.js"></script>
+</body>
+</html>

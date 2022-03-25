@@ -18,7 +18,7 @@ console.log(usuario1);
 
 let paisesAmericaDosul= ["brasil", "argentina" , "chile", "equador", "uruguai"]
 let linguagensDeProgramacao=["java","python","javascript","typescript","csharp"]
-let listaFrutas=["goiaba"]
+let listaFrutas=["goiaba", "manga", "pitaya", "morango", "abacaxi"]
 
 let temas =[paisesAmericaDosul, linguagensDeProgramacao, listaFrutas]
 
@@ -105,39 +105,35 @@ class word{
     }
     }
 
-
-
-
-
-
-let novamente=true;
-while(novamente){
-    const jogo = new forca()
-    let opcaoEscolhida=jogo.jogar()
-    let palavra2 = new word(opcaoEscolhida)
-
-    /*console.log(palavra2.checkCaracates("a"));
-    console.log(palavra2.checkCaracates("l"))
-    console.log(palavra2.checkCaracates("m"))
-    console.log(palavra2.checkCaracates("j"))
-    console.log(palavra2.checkCaracates("p"));
-    console.log(palavra2.checkCaracates("x"));
-    console.log(palavra2.checkCaracates("w"));
-    console.log(palavra2.checkCaracates("r"));*/
-    let letra='';
-    for (let i = 0; i < 5; i++) {
-        letra = prompt("Digite uma letra:");
-        palavra2.checkCaracates(letra)
-    }
-
-    sleep(500).then(() => {  
-        let pergunta = prompt("Deseja jogar o Jogo da Forca do Squad Verde novamente?\nDigite 1 para SIM\nDigite 2 para NÃO");
-        if (pergunta=="2"){
-            novamente=false
-    }
-    })
-}
+    let novamente=true;
+    while(novamente){
+        const jogo = new forca()
+        let opcaoEscolhida=jogo.jogar()
+        let palavra2 = new word(opcaoEscolhida)
     
-
-
-
+        /*console.log(palavra2.checkCaracates("a"));
+        console.log(palavra2.checkCaracates("l"))
+        console.log(palavra2.checkCaracates("m"))
+        console.log(palavra2.checkCaracates("j"))
+        console.log(palavra2.checkCaracates("p"));
+        console.log(palavra2.checkCaracates("x"));
+        console.log(palavra2.checkCaracates("w"));
+        console.log(palavra2.checkCaracates("r"));*/
+        let letra='';
+        for (let i = 0; i < 5; i++) {
+            letra = prompt("Digite uma letra:");
+            palavra2.checkCaracates(letra)
+            //Sleep de 5 milisegundos
+            for (let i = 0; i < 50000; i++){
+    
+            }
+            
+        }
+    
+     
+            let pergunta = prompt("Deseja jogar o Jogo da Forca do Squad Verde novamente?\nDigite 1 para SIM\nDigite 2 para NÃO");
+            if (pergunta=="2"){
+                novamente=false
+        }
+        
+    }

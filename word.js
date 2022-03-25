@@ -66,7 +66,7 @@ class word{
         this.caracteres = word.split("");
         this.boxes = this.caracteres.map(cara =>{return"_"});
         this.vidas = 5;
-        this.acertos=0;
+        this.erros =0;
     }
     
 
@@ -76,7 +76,7 @@ class word{
         for(let i =0; i <this.boxes.length; i++){
             if(cara==this.caracteres[i]){
                 if(cara !== this.boxes[i]){
-                    this.acertos++
+                    this.erros++
                 }
                 this.boxes[i]=cara;
                 console.log(this.boxes[i]);
@@ -99,12 +99,10 @@ class word{
               ;
             }
             console.log("Você Perdeu")
-        
         }
 
     }
     }
-
 
 
 
@@ -128,14 +126,19 @@ while(novamente){
     for (let i = 0; i < 5; i++) {
         letra = prompt("Digite uma letra:");
         palavra2.checkCaracates(letra)
+        //Sleep de 5 milisegundos
+        for (let i = 0; i < 50000; i++){
+
+        }
+        
     }
 
-    sleep(500).then(() => {  
+ 
         let pergunta = prompt("Deseja jogar o Jogo da Forca do Squad Verde novamente?\nDigite 1 para SIM\nDigite 2 para NÃO");
         if (pergunta=="2"){
             novamente=false
     }
-    })
+    
 }
     
 
